@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cart | Velora</title>
+  <meta name="description" content="Shopping cart with quantity controls and order summary.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="cart">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span>V</span>Velora</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="wishlist.html">Wishlist <strong data-wishlist-count>0</strong></a>
+      <a href="cart.html">Cart <strong data-cart-count>0</strong></a>
+      <a href="account.html">Account</a>
+    </nav>
+  </header>
+  <main class="page-shell">
+    <section class="page-hero">
+      <p class="eyebrow">Your bag</p>
+      <h1>Review your picks before checkout.</h1>
+    </section>
+    <section class="cart-layout">
+      <div class="stack" data-cart-items></div>
+      <aside class="summary-card" data-cart-summary></aside>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 Velora.</p>
+    <div><a href="shop.html">Shop</a><a href="checkout.html">Checkout</a></div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Velora</title>
+  <meta name="description" content="Responsive ecommerce checkout page with customer, shipping, and payment forms.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="checkout">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span>V</span>Velora</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="wishlist.html">Wishlist <strong data-wishlist-count>0</strong></a>
+      <a href="cart.html">Cart <strong data-cart-count>0</strong></a>
+      <a href="account.html">Account</a>
+    </nav>
+  </header>
+  <main class="page-shell">
+    <section class="page-hero">
+      <p class="eyebrow">Secure checkout</p>
+      <h1>Complete your order.</h1>
+    </section>
+    <section class="checkout-layout">
+      <form class="checkout-form" data-checkout-form>
+        <div class="form-section">
+          <h2>Contact</h2>
+          <div class="field-grid">
+            <label>Full name<input required name="name" autocomplete="name"></label>
+            <label>Email<input required type="email" name="email" autocomplete="email"></label>
+            <label>Phone<input required name="phone" autocomplete="tel"></label>
+          </div>
+        </div>
+        <div class="form-section">
+          <h2>Shipping</h2>
+          <label>Address<input required name="address" autocomplete="street-address"></label>
+          <div class="field-grid">
+            <label>City<input required name="city" autocomplete="address-level2"></label>
+            <label>State<input required name="state" autocomplete="address-level1"></label>
+            <label>PIN code<input required name="zip" inputmode="numeric" autocomplete="postal-code"></label>
+          </div>
+        </div>
+        <div class="form-section">
+          <h2>Payment</h2>
+          <div class="payment-options">
+            <label><input type="radio" name="payment" value="Card" checked> Card</label>
+            <label><input type="radio" name="payment" value="UPI"> UPI</label>
+            <label><input type="radio" name="payment" value="Cash on delivery"> Cash on delivery</label>
+          </div>
+          <div class="field-grid">
+            <label>Card number<input name="card" inputmode="numeric" placeholder="4242 4242 4242 4242"></label>
+            <label>Expiry<input name="expiry" placeholder="MM/YY"></label>
+            <label>CVV<input name="cvv" inputmode="numeric" placeholder="123"></label>
+          </div>
+        </div>
+        <button class="btn primary full" type="submit">Place order</button>
+      </form>
+      <aside class="summary-card" data-checkout-summary></aside>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 Velora.</p>
+    <div><a href="shop.html">Shop</a><a href="cart.html">Cart</a></div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

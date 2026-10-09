@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop | Velora</title>
+  <meta name="description" content="Browse responsive ecommerce categories, filters, and product cards.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="shop">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span>V</span>Velora</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="wishlist.html">Wishlist <strong data-wishlist-count>0</strong></a>
+      <a href="cart.html">Cart <strong data-cart-count>0</strong></a>
+      <a href="account.html">Account</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero shop-hero">
+      <p class="eyebrow">Full catalog</p>
+      <h1>Find the pieces that fit your day.</h1>
+    </section>
+
+    <section class="shop-layout">
+      <aside class="filters" aria-label="Product filters">
+        <label>
+          Search
+          <input type="search" data-search placeholder="Try jacket, lamp, serum">
+        </label>
+        <label>
+          Category
+          <select data-category-filter>
+            <option value="All">All categories</option>
+            <option>Fashion</option>
+            <option>Tech</option>
+            <option>Beauty</option>
+            <option>Home</option>
+          </select>
+        </label>
+        <label>
+          Sort
+          <select data-sort-filter>
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: Low to high</option>
+            <option value="price-high">Price: High to low</option>
+            <option value="rating">Top rated</option>
+          </select>
+        </label>
+        <button class="btn ghost full" type="button" data-clear-filters>Clear filters</button>
+      </aside>
+      <div>
+        <div class="toolbar">
+          <p><strong data-result-count>0</strong> products</p>
+          <p>Free shipping over ₹3,999</p>
+        </div>
+        <div class="product-grid" data-shop-products></div>
+        <div class="empty-state hidden" data-empty-shop>
+          <h2>No products found</h2>
+          <p>Try another search or clear the filters.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Velora.</p>
+    <div><a href="cart.html">Cart</a><a href="checkout.html">Checkout</a></div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

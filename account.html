@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account | Velora</title>
+  <meta name="description" content="Customer account page with profile, orders, and rewards.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="account">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span>V</span>Velora</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="wishlist.html">Wishlist <strong data-wishlist-count>0</strong></a>
+      <a href="cart.html">Cart <strong data-cart-count>0</strong></a>
+      <a href="account.html">Account</a>
+    </nav>
+  </header>
+  <main class="page-shell">
+    <section class="page-hero">
+      <p class="eyebrow">My Velora</p>
+      <h1>Account dashboard</h1>
+    </section>
+    <section class="account-grid">
+      <div class="account-card profile-card">
+        <div class="avatar">AV</div>
+        <h2>Aarav Verma</h2>
+        <p>velora.member@example.com</p>
+        <a class="btn ghost full" href="wishlist.html">View wishlist</a>
+      </div>
+      <div class="account-card">
+        <h2>Recent orders</h2>
+        <div class="order-row"><span>#VL-2048</span><strong>Delivered</strong></div>
+        <div class="order-row"><span>#VL-2031</span><strong>In transit</strong></div>
+        <div class="order-row"><span>#VL-1987</span><strong>Returned</strong></div>
+      </div>
+      <div class="account-card">
+        <h2>Rewards</h2>
+        <p class="reward-number">1,280</p>
+        <p>points available for your next checkout.</p>
+      </div>
+      <form class="account-card newsletter-form">
+        <h2>Stay updated</h2>
+        <label>Email<input type="email" placeholder="you@example.com"></label>
+        <button class="btn primary full" type="submit">Save preference</button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 Velora.</p>
+    <div><a href="shop.html">Shop</a><a href="checkout.html">Checkout</a></div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

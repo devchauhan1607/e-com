@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wishlist | Velora</title>
+  <meta name="description" content="Saved wishlist products for a modern ecommerce website.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="wishlist">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span>V</span>Velora</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="wishlist.html">Wishlist <strong data-wishlist-count>0</strong></a>
+      <a href="cart.html">Cart <strong data-cart-count>0</strong></a>
+      <a href="account.html">Account</a>
+    </nav>
+  </header>
+  <main class="page-shell">
+    <section class="page-hero">
+      <p class="eyebrow">Saved for later</p>
+      <h1>Your wishlist</h1>
+    </section>
+    <div class="product-grid" data-wishlist-products></div>
+    <div class="empty-state hidden" data-empty-wishlist>
+      <h2>No saved products yet</h2>
+      <p>Tap the heart on any product to keep it here.</p>
+      <a class="btn primary" href="shop.html">Start shopping</a>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 Velora.</p>
+    <div><a href="shop.html">Shop</a><a href="cart.html">Cart</a></div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

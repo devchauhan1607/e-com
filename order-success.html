@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Placed | Velora</title>
+  <meta name="description" content="Order confirmation page for Velora.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="success">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span>V</span>Velora</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="wishlist.html">Wishlist <strong data-wishlist-count>0</strong></a>
+      <a href="cart.html">Cart <strong data-cart-count>0</strong></a>
+      <a href="account.html">Account</a>
+    </nav>
+  </header>
+  <main class="success-page">
+    <section class="success-card">
+      <div class="success-icon">✓</div>
+      <p class="eyebrow">Order confirmed</p>
+      <h1>Thanks, your order is placed.</h1>
+      <p>Your confirmation number is <strong data-order-id>VL-0000</strong>. A demo receipt has been saved in this browser.</p>
+      <div class="hero-actions centered">
+        <a class="btn primary" href="shop.html">Continue shopping</a>
+        <a class="btn ghost" href="account.html">View account</a>
+      </div>
+    </section>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>
