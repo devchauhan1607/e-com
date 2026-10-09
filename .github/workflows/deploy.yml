@@ -1,0 +1,36 @@
+
+name: Auto Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to AWS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ${{ secrets.AWS_USER }}
+          key: ${{ secrets.AWS_SSH_KEY }}
+          script: |
+           PROJECT=${{ github.event.repository.name }}
+           HOME= ${{ secrets.HOME }}
+            BASE=$HOME/public_html/cdmit.in/projects/$PROJECT
+
+            echo "🚀 Deploying $PROJECT"
+
+            mkdir -p $BASE
+
+            if [ ! -d "$BASE/.git" ]; then
+              git clone https://github.com/${{ github.repository }} $BASE
+            fi
+
+            cd $BASE
+            git pull origin main
+
+            echo "✅ Done"
